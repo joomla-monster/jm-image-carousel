@@ -84,7 +84,7 @@ $link_target = $params->get('link_target', 0);
 $target_attribute = ( $link_target == 1 ) ? '_blank' : '_self';
 
 $show_indicators = $params->get('show_indicators', 0);
-$nav = ( $show_indicators == 1 ) ? 'after' : 'false';
+$nav = ( $show_indicators == 1 ) ? '"after"' : 'false';
 $indicators = ( $show_indicators == 1 ) ? true : false;
 
 $loop_param = $params->get('loop', 0);
@@ -114,7 +114,7 @@ $doc->addScriptDeclaration('
 			id: "#' . $id . '",
 			style: "' . $style . '",
 			spacing: -0.4,
-			nav: "' . $nav . '",
+			nav: ' . $nav . ',
 			buttons: ' . $buttons . ',
 			loop: ' . $loop . ',
 			scrollwheel: ' . $scroll . ',
